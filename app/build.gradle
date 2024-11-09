@@ -1,0 +1,111 @@
+
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.2'
+    id 'io.spring.dependency-management' version '1.1.6'
+    id 'application'
+}
+
+// plugins {
+//     id 'java'
+//     id 'org.springframework.boot' version '3.0.0'
+//     id 'io.spring.dependency-management' version '1.1.0'
+//     id 'application'
+// }
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Use Guava library
+    implementation 'com.google.guava:guava:31.0.1-jre'
+
+    // Twilio SDK
+    implementation 'com.twilio.sdk:twilio:8.31.1'
+
+    // Spring Boot Starter Web
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Spring Boot Starter Test and Mockito for testing
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // testImplementation 'org.mockito:mockito-core:4.8.0' // Updated to match version compatibility
+    testImplementation 'org.mockito:mockito-inline:4.8.0'
+
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(20) // Adjust if necessary based on your JDK version
+    }
+}
+
+application {
+    // Define the main class for the application.
+    mainClass.set('org.example.whatsappbot.WhatsAppBotApplication')
+}
+
+tasks.named('test') {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+}
+
+
+// plugins {
+//     // Apply the application plugin to add support for building a CLI application in Java.
+//     id 'java'
+//      id 'org.springframework.boot' version '3.0.0'
+//        id 'io.spring.dependency-management' version '1.1.0'
+//     id 'application'
+// }
+
+// repositories {
+//     // Use Maven Central for resolving dependencies.
+//     mavenCentral()
+// }
+
+// dependencies {
+//     // Use JUnit Jupiter for testing.
+//     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+
+//     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+//     // // This dependency is used by the application.
+//     implementation 'com.google.guava:guava:31.0.1-jre'
+    
+//     // Add Twilio and Spring Boot dependencies
+//     implementation 'com.twilio.sdk:twilio:8.31.1'
+//     implementation 'org.springframework.boot:spring-boot-starter-web'
+//     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//     testImplementation 'org.mockito:mockito-core:3.9.0'
+// }
+
+// // Apply a specific Java toolchain to ease working on different environments.
+// java {
+//     toolchain {
+//         languageVersion = JavaLanguageVersion.of(20)
+//     }
+// }
+
+// application {
+//     // Define the main class for the application.
+//     // mainClass = 'com.example.whatsappbot.WhatsAppBotApplication'
+//     mainClass = 'org.example.whatsappbot.WhatsAppBotApplication'
+// }
+
+// tasks.named('test') {
+//     // Use JUnit Platform for unit tests.
+//     useJUnitPlatform()
+// }
+
+
+
+// Added Dependencies:
+// Twilio SDK: To interact with the Twilio API for sending and receiving WhatsApp messages.
+// Spring Boot Starter Web: To create a RESTful web service for handling webhook events from Twilio.
+// Spring Boot Starter Test: For testing the Spring Boot application.
+// Mockito: For mocking dependencies in tests.

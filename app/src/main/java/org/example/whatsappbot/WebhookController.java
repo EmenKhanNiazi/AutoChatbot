@@ -13,7 +13,8 @@ public class WebhookController {
  private static final Dotenv dotenv = Dotenv.load();
     // Twilio credentials
     public static final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID"); // Replace with your accound sID
-    public static final String AUTH_TOKEN =  dotenv.get("TWILIO_AUTH_TOKEN"); // Replace with your Auth Token
+    public static figit ls-files .env
+nal String AUTH_TOKEN =  dotenv.get("TWILIO_AUTH_TOKEN"); // Replace with your Auth Token
     public static final String TWILIO_PHONE_NUMBER = dotenv.get("TWILIO_PHONE_NUMBER"); // Replace with your Twilio phone number for WhatsApp
 
     static {

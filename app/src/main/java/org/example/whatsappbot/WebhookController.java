@@ -12,7 +12,7 @@ import java.util.Map;
 public class WebhookController {
 
     // Twilio credentials
-    public static final String ACCOUNT_SID = "AC19860b0adc196d470bac20ea678b36df"; // Replace with your Account SID
+    public static final String ACCOUNT_SID = "AC19860b0adc196d470bac20ea678b36df"; // .
     public static final String AUTH_TOKEN = "7cfe5157cf55b6abb6d8aa10cb09c9d8"; // Replace with your Auth Token
     public static final String TWILIO_PHONE_NUMBER = "whatsapp:+14155238886"; // Replace with your Twilio phone number for WhatsApp
 

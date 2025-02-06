@@ -10,11 +10,11 @@ import java.util.Map;
 
 @RestController
 public class WebhookController {
-
+ private static final Dotenv dotenv = Dotenv.load();
     // Twilio credentials
-    public static final String ACCOUNT_SID = "AC19860b0adc196d470bac20ea678b36df"; // Replace with your accound sID
-    public static final String AUTH_TOKEN = "7cfe5157cf55b6abb6d8aa10cb09c9d8"; // Replace with your Auth Token
-    public static final String TWILIO_PHONE_NUMBER = "whatsapp:+14155238886"; // Replace with your Twilio phone number for WhatsApp
+    public static final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID"); // Replace with your accound sID
+    public static final String AUTH_TOKEN =  dotenv.get("TWILIO_AUTH_TOKEN"); // Replace with your Auth Token
+    public static final String TWILIO_PHONE_NUMBER = dotenv.get("TWILIO_PHONE_NUMBER"); // Replace with your Twilio phone number for WhatsApp
 
     static {
         Twilio.init(ACCOUNT_SID, AUTH_TOKEN);

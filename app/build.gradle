@@ -18,6 +18,9 @@ repositories {
 }
 
 dependencies {
+    //for env file 
+    implementation 'io.github.cdimascio:dotenv-java:5.2.2'
+
     // Use JUnit Jupiter for testing.
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
